@@ -9,11 +9,20 @@ class Account(Client):
         with open('responses.json', 'r') as file1:
             file1_json = json.load(file1)
             responses = list(file1_json["responses"])
+        message = 'sambar'
+        sentMessage = None
         toggle = self.fetchThreadMessages(thread_id, 1, None)
         for elem in toggle:
             sentMessage = elem
             break
         sentMessage = sentMessage.lower()
+        self.login('email',get_pass())
+        if message in sentMessage:
+            self.send(Message(choice(responses)), thread_id, thread_type)
+            self.markAsDelivered(author_id, thread_id)
+        self.logout()
+        self.stopListening()
+
 
 
 
