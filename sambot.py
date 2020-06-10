@@ -15,7 +15,10 @@ class Account(Client):
         for elem in toggle:
             sentMessage = elem
             break
-        sentMessage = sentMessage.lower()
+        try:
+            sentMessage = sentMessage.lower()
+        except AttributeError:
+            sentMessage = sentMessage.text.lower()
         self.login('email',get_pass())
         if message in sentMessage:
             self.send(Message(choice(responses)), thread_id, thread_type)
