@@ -24,8 +24,8 @@ class Account(Client):
         self.stopListening()
 
 client = Account('email', get_pass())
-'''
-client.send(Message('we need sambar'), thread_id, ThreadType.USER)
-'''
+
 while True:
+    client.login('email',get_pass())
     client.listen()
+    client.logout()
