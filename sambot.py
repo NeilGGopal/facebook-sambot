@@ -9,6 +9,11 @@ class Account(Client):
         with open('responses.json', 'r') as file1:
             file1_json = json.load(file1)
             responses = list(file1_json["responses"])
+        toggle = self.fetchThreadMessages(thread_id, 1, None)
+        for elem in toggle:
+            sentMessage = elem
+            break
+        sentMessage = sentMessage.lower()
 
 
 
