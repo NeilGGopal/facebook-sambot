@@ -19,12 +19,12 @@ class Account(Client):
             sentMessage = sentMessage.lower()
         except AttributeError:
             sentMessage = sentMessage.text.lower()
-        self.login('email',get_pass())
+        #self.login('email',get_pass())
         if message in sentMessage:
             self.send(Message(choice(responses)), thread_id, thread_type)
             self.markAsDelivered(author_id, thread_id)
-        self.logout()
-        self.stopListening()
+        #self.logout()
+        #self.stopListening()
 
 client = Account('email', get_pass())
 
