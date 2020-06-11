@@ -11,4 +11,6 @@ Facebook "bot" that uses a user account to send customized messages to chats if 
 
 4. Replace the "password" in getpass.py with your Facebook password.
 
-5. Run the program in the terminal by typing the following: $ python3 sambot.py
+5. Replace the sambar image path on line 24 to its path on your computer.
+
+6. Run the program in the terminal by typing the following: $ python3 sambot.py
