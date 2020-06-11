@@ -1,5 +1,5 @@
 # sambot
-Facebook "bot" that uses a user account to send sambar to users / group chats. This uses the [fbchat Python API](https://github.com/carpedm20/fbchat) by carpedm20.
+Facebook "bot" that uses a user account to send customized messages to chats if other users message the word "sambar". This uses the [fbchat Python API](https://github.com/carpedm20/fbchat) by carpedm20.
 
 # Installation (Mac OS X)
 
