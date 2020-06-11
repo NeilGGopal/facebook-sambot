@@ -5,7 +5,7 @@ Facebook "bot" that uses a user account to send sambar to users / group chats. T
 
 1. Clone this repository by clicking the green clone/download button and copying the SSH. 
 
-2. In the terminal, type the following: $ git clone (paste here).
+2. In the terminal, type the following: $ git clone (paste here)
 
 3. Replace all instances of "email" in sambot.py with your Facebook email.
 
