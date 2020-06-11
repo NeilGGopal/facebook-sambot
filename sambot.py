@@ -29,9 +29,4 @@ class Account(Client):
 client = Account('email', get_pass())
 
 while True:
-    client.login('email',get_pass())
     client.listen()
-    try:
-        client.logout()
-    except AttributeError:
-        client.stopListening()
