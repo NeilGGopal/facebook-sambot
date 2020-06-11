@@ -20,7 +20,7 @@ class Account(Client):
         except AttributeError:
             sentMessage = sentMessage.text.lower()
         #self.login('email',get_pass())
-        if message in sentMessage:
+        if message in sentMessage and author_id != client.uid:
             self.send(Message(choice(responses)), thread_id, thread_type)
             self.markAsDelivered(author_id, thread_id)
         #self.logout()
