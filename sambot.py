@@ -23,6 +23,7 @@ class Account(Client):
         if message in sentMessage and author_id != client.uid:
             self.sendLocalFiles('/Users/user/facebook-sambot/Sambar.jpg', Message(choice(responses)), thread_id, thread_type)
             self.markAsDelivered(author_id, thread_id)
+            self.markAsRead(thread_id)
         #self.logout()
         #self.stopListening()
 
